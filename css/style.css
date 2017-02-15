@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+}
+@font-face {
+    font-family: 'Minsk';
+    src: url('../fonts/Minsk-regular.otf');
+}
+
+/*CSS normalize*/
+
+html {
+	font-family: 'Minsk', sans-serif, serif; 
+	font-size: 14px;
+	color: #333;
+	-ms-text-size-adjust: auto; 
+	-webkit-text-size-adjust: auto%; 
+}
+
+body {
+	margin: 0;
+}
+
+/* The correct display in IE 9 */
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent; 
+  -webkit-text-decoration-skip: objects; 
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/*============================================*/
+
+.container {
+	min-height: 100vh;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background: rgba(230,255,233, 0.9);
+    justify-content: center;
+}
+
+.header {
+	height: 30px;
+}
+
+.header-title {
+    font-size: 1.8em;
+	text-shadow: 3px;
+	color: rgba(115, 127, 116, 1);
+}
+
+.row-content {
+    width: 48%;
+    margin: 0 auto;
+    background: pink;
+}
+
+
+/*.row-content a {
+    font-size: 2em;
+    color: #333;
+}*/
