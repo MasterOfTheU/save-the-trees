@@ -1,14 +1,23 @@
+$main_bg_color: rgba(243, 255, 244, 0.9);
+$link_color: rgb(115, 127, 116);
+
 html {
-  font-family: 'Helvetica', sans-serif;
-  font-size: 14px;
+
+  font: {
+    family: 'Helvetica', sans-serif;
+    size: 14px;
+  }
+  
   color: #333;
   box-sizing: border-box;
   -ms-text-size-adjust: auto;
-  -webkit-text-size-adjust: auto; }
+  -webkit-text-size-adjust: auto;
+}
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * 1. Remove the gray background on active links in IE 10.
@@ -17,48 +26,59 @@ body {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  
   /**
    * Remove the outline on focused links when they are also active or hovered
    * in all browsers (opinionated).
-   */ }
-  a:active, a.hover {
-    outline-width: 0; }
+   */
+  &:active, &.hover {
+    outline-width: 0;
+  }
+}
 
 .container {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: rgba(243, 255, 244, 0.9); }
+  background: $main_bg_color;
+}
 
 header {
   line-height: 1.5em;
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px solid #fff;
+}
 
 .logo {
   padding-left: 10px;
   line-height: 1.5em;
   width: 270px;
   cursor: pointer;
-  text-transform: uppercase; }
-
-.logo a, .row-content a {
-  color: #737f74;
-  text-decoration: none; }
-.logo a:hover, .row-content a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  text-shadow: 5px; }
+  text-transform: uppercase;
+}
+.logo, .row-content {
+  a {
+    color: $link_color;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color: rgba(255, 255, 255, .5);
+    text-shadow: 5px;
+  }
+}
 
 .row-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  flex-wrap: wrap; }
-  .row-content a {
+  flex-wrap: wrap;
+  
+  a {
     align-self: center;
     font-size: 3em;
     width: 36%;
     padding: 2%;
-    margin: 2%; }
-
-/*# sourceMappingURL=style.css.map */
+    margin: 2%;
+  }
+}
