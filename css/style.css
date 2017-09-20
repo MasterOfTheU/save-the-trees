@@ -1,8 +1,9 @@
 html {
   font-family: 'Helvetica', sans-serif;
   font-size: 14px;
-  color: #333;
-  box-sizing: border-box;
+  color: #333333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -ms-text-size-adjust: auto;
   -webkit-text-size-adjust: auto; }
 
@@ -26,13 +27,18 @@ a {
 
 .container {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: rgba(243, 255, 244, 0.9); }
 
 header {
   line-height: 1.5em;
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px solid white; }
 
 .logo {
   padding-left: 10px;
@@ -49,13 +55,23 @@ header {
   text-shadow: 5px; }
 
 .row-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .row-content a {
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     font-size: 3em;
     width: 36%;
     padding: 2%;
