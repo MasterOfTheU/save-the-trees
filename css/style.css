@@ -125,6 +125,7 @@ h1 {
   text-decoration: none; }
 
 .shadow-link {
+  color: #737f74;
   -ms-flex-item-align: center;
       align-self: center;
   font-size: 3.5em;
