@@ -1,15 +1,30 @@
+@font-face {
+  font-family: 'Alcubierre';
+  src: url("../fonts/Alcubierre.otf"); }
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url("../fonts/Alegreya-Sans-Bold.ttf"); }
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s; }
+
+a {
+  text-decoration: none; }
+
 html {
-  font-family: 'Helvetica', sans-serif;
-  font-size: 14px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 16px;
   color: #333333;
+  background-color: rgba(254, 255, 244, 0.9);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -ms-text-size-adjust: auto;
   -webkit-text-size-adjust: auto; }
 
 body {
-  margin: 0;
-  padding: 0; }
+  overflow-x: hidden; }
 
 /**
  * 1. Remove the gray background on active links in IE 10.
@@ -25,8 +40,16 @@ a {
   a:active, a.hover {
     outline-width: 0; }
 
-.container {
-  height: 100vh;
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,47 +57,96 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: rgba(243, 255, 244, 0.9); }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.space-evenly {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.space-around {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.align-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.container {
+  margin-top: 1%;
+  min-height: 100%;
+  width: 100%;
+  background: rgba(254, 255, 244, 0.9); }
 
 header {
   line-height: 1.5em;
   border-bottom: 1px solid white; }
 
-.logo {
-  padding-left: 10px;
-  line-height: 1.5em;
-  width: 270px;
-  cursor: pointer;
-  text-transform: uppercase; }
-
-.logo a, .row-content a {
+h1 {
+  margin-top: 1%;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 8em;
   color: #737f74;
+  line-height: 1.5em;
+  cursor: pointer;
+  text-transform: uppercase;
   text-decoration: none; }
-.logo a:hover, .row-content a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  text-shadow: 5px; }
 
-.row-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .row-content a {
-    -ms-flex-item-align: center;
-        align-self: center;
-    font-size: 3em;
-    width: 36%;
-    padding: 2%;
-    margin: 2%; }
+.shadow-link {
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 3.5em;
+  width: 36%;
+  padding: 2%;
+  margin: 1%; }
+
+.shadow-link:hover {
+  text-shadow: 0 1px 1px #4f4f4f; }
+
+.links-block {
+  width: 80%; }
+
+hr {
+  width: 100vw;
+  color: #333333; }
+
+footer {
+  margin-top: 1%;
+  margin-bottom: 5px; }
+
+footer p {
+  font-size: 1.125em; }
 
 /*# sourceMappingURL=style.css.map */
